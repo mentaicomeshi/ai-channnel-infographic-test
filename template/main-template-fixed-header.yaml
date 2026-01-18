@@ -1,0 +1,213 @@
+critical_rules:
+  image_handling: |
+    **添付画像の扱い**: 添付画像を背景・レイアウトの土台としてそのまま使用する。
+  header_preservation: |
+    **ヘッダー情報の維持**: 添付画像に描画されている「左上のロゴ」および「右上のタイトル（メインテーマ）およびタイトルを囲う図形」は**不変**とし、一切の編集や上書きを行わないこと。
+
+context:
+  description: |
+    ユーザーが入力するテキスト文に応じて、毎回同じスタイル・配色・
+    タイポグラフィ・使用される図形やオブジェクトの傾向を維持して
+    インフォグラフィックを作成するためのテンプレート。
+  target_audience: "一般層向け、直感的で分かりやすい解説"
+  purpose: "情報の整理と視覚的な伝達"
+design_principles:
+  information_architecture:
+    - principle: "事実関係の明確化"
+      description: "各要素間の因果関係や事実の繋がりを視覚的に表現し、誤解を生まないようにする"
+    - principle: "相関関係の可視化"
+      description: "関連する情報同士を近くに配置し、矢印や線で関係性を明示する"
+    - principle: "順序の追いやすさ"
+      description: "時系列やステップは左から右、上から下へ流れるように配置し、番号やフロー矢印で順序を示す"
+    - principle: "情報の整理整頓"
+      description: |
+        - 類似情報はグループ化してまとめる
+        - 余白を適切に取り、詰め込みすぎない
+        - 視線の自然な流れ（Z型、F型）を意識した配置
+        - 重要度に応じて視覚的な重み付けを行う（サイズ、色、太さ）
+  visual_hierarchy:
+    levels:
+      - level: 1
+        element: "メインタイトル"
+        treatment: "最大サイズ、太字、画面上部中央"
+      - level: 2
+        element: "セクションヘッダー/ステップタイトル"
+        treatment: "中サイズ、太字、各ボックス上部"
+      - level: 3
+        element: "本文・説明テキスト"
+        treatment: "読みやすいサイズ、標準ウェイト"
+      - level: 4
+        element: "補足・注釈"
+        treatment: "小サイズ、薄いグレー"
+style_definition:
+  color_palette:
+    primary_accent: "#08AEF4"      
+    secondary_accent: "#E0F7FF"    
+    tertiary_accent: "#B3E5FC"     
+    text_main: "#000000"           
+    text_sub: "#333333"            
+    text_caption: "#666666"        
+    background: "#FFFFFF"          
+    illustration_fill: "#000000"   
+  typography:
+    font_family_jp: "Noto Sans JP, Hiragino Kaku Gothic ProN, Gothic"
+    title:
+      weight: "Black (900)"
+      size: "32-48px相当"
+      color: "text_main"
+      letter_spacing: "広め"
+    section_header:
+      weight: "Bold (700)"
+      size: "18-24px相当"
+      color: "text_main"
+      letter_spacing: "標準"
+    body:
+      weight: "Medium (500)"
+      size: "14-16px相当"
+      color: "text_main"
+      line_height: "1.6-1.8"
+    caption:
+      weight: "Regular (400)"
+      size: "12px相当"
+      color: "text_caption"
+visual_assets:
+  illustration_style:
+    overall: "Flat Vector / Pictogram Style（フラットでミニマルなベクター形式）"
+    color_usage: "基本的にモノクロ（黒シルエット）、アクセントとしてprimary_accentを使用"
+    line_weight: "統一された太さ、シンプルでクリーンなライン"
+  required_motifs:
+    - motif: "ピクトグラム系フラット図形"
+      description: |
+        人物のシルエット、アイコン的なオブジェクト表現。
+        ISO標準ピクトグラムのような、誰が見ても直感的に理解できるシンプルな形状。
+      usage: "人の動作、概念の説明、ステップの視覚化"
+      style: "黒塗りシルエット、または細い線のアウトライン"
+      examples:
+        - "走る人、話し合う人々、作業する人"
+        - "時計、カレンダー、チェックマーク"
+        - "矢印、吹き出し、歯車"
+    - motif: "猫（Cat）"
+      description: |
+        黒猫をメインマスコットとして使用。
+        可愛らしさと知的さを兼ね備えたデザイン。
+      usage: "マスコットキャラクター、アイキャッチ、空白スペースの装飾"
+      style: "フラットなシルエット、またはシンプルなイラスト調"
+      behaviors:
+        - "作業を手伝っている様子（掃除道具を持つ、本を運ぶ等）"
+        - "読者を案内している様子（指し示す、歩いている）"
+        - "リラックスして見守っている様子"
+      placement: "左下隅、フローの開始/終了地点、余白スペース"
+    - motif: "本（Book）"
+      description: |
+        知識、学習、情報を象徴するモチーフ。
+        開いた本、積まれた本、本棚など。
+      usage: "学習コンテンツ、知識の蓄積、参考情報を示す場面"
+      style: "シンプルなフラットアイコン、黒またはアクセントカラー"
+      variations:
+        - "開いた本（学習中、読書中）"
+        - "閉じた本（知識の蓄積）"
+        - "複数の本（ライブラリ、大量の情報）"
+    - motif: "ワイン（Wine）"
+      description: |
+        優雅さ、成熟、ライフスタイルを象徴するモチーフ。
+        ワイングラス、ワインボトルなど。
+      usage: "リラックス、成果の享受、洗練されたアプローチを示す場面"
+      style: "エレガントなシルエット、細いラインアート"
+      variations:
+        - "ワイングラス（単体または乾杯シーン）"
+        - "ワインボトル（準備、ストック）"
+        - "ワインとチーズ等のペアリング（組み合わせ、相性）"
+layout_template:
+  canvas:
+    aspect_ratio: "16:9"
+    background: "背景色はwhite、薄い幾何学模様や斜線を装飾として入れてもよい"
+    margin: "適切な余白を確保し、詰め込みすぎない"
+  structure: "Step-by-step Flowchart（段階的なフローチャート形式）"
+  header_area:
+    logo:
+      position: "Top Left"
+      content: "（添付画像のロゴを維持・編集不可）"
+      style: "既存のロゴをそのまま使用"
+      status: "Immutable / Do not edit"
+    main_theme:
+      position: "Top Right"
+      content: "（添付画像の右上タイトルを維持・編集不可）"
+      style: "既存の右上タイトルをそのまま使用"
+      status: "Immutable / Do not edit"
+    title:
+      position: "Top Center"
+      content: "各チャプターのタイトル（最も大きく目立つ）"
+      style: "太字、中央揃え"
+      size: "大（32-48px相当）"
+      color: "text_main"
+  content_grid:
+    organization: "論理的な流れに基づく配置（横方向または縦方向）"
+    items_per_row: "3〜4項目（内容量に応じて調整）"
+    container_style:
+      border_color: "primary_accent"
+      border_width: "2px"
+      shape: "Rectangular with chamfered corners（角が斜めにカットされたサイバー調）"
+      fill: "transparent または secondary_accentの極薄塗り"
+      shadow: "なし、またはごく薄いドロップシャドウ"
+    flow_indicators:
+      type: "Arrows（矢印）"
+      style: "太めの塗りつぶし矢印"
+      color: "primary_accent"
+      direction: "左→右、または上→下の順序を示す"
+  footer_area:
+    style: "Minimal"
+    elements: 
+      - "マスコット（猫）の小さな登場"
+      - "アクセント装飾"
+      - "必要に応じて出典や補足"
+flow_patterns:
+  - pattern: "Linear Flow（直線フロー）"
+    description: "ステップが一直線に並ぶ。最もシンプル。"
+    use_case: "手順説明、時系列"
+  - pattern: "Branching Flow（分岐フロー）"
+    description: "途中で選択肢や条件分岐がある。"
+    use_case: "意思決定プロセス、条件付きアクション"
+  - pattern: "Circular Flow（循環フロー）"
+    description: "始点と終点が繋がる循環構造。"
+    use_case: "繰り返しプロセス、習慣化"
+  - pattern: "Hub and Spoke（ハブ＆スポーク）"
+    description: "中心に主題があり、放射状に関連要素が広がる。"
+    use_case: "中心概念と関連要素の説明"
+input_data_schema:
+  instructions: |
+    以下の情報、および**添付された画像（入力画像）を土台として**インフォグラフィックを生成せよ。
+    以下の手順に従って厳密に作成すること。
+
+
+    【インフォグラフィック本体の作成手順】
+    クリティカルルール（ヘッダー情報の不変維持）を遵守し、以下のルールで中身を作成する。
+    ※重要: 中央タイトル、図形、文章は、ヘッダーの左上ロゴと右上タイトルに**絶対にかぶらないよう**注意して配置すること。
+
+    1. 中央上部に `title` （チャプタータイトル）を大きく目立つように配置する。
+    2. `summary` の内容を分析し、複数のポイントに分解する。
+    3. 各ポイントに対してコンテナ（ボックス）を作成し、ピクトグラムで視覚化する。
+    4. コンテナ間は青い矢印（#08AEF4）で論理的な順序に沿って接続する。
+    5. 黒猫のマスコットを適切な位置に配置する。
+    6. 空きスペースには本やワインのモチーフを装飾として配置してもよい。
+    7. 事実関係、相関関係、順序が一目で追えるように配置する。
+  title: "【ここに各チャプタータイトルを入れる】"
+  summary: |
+    【ここに要約文を入れる】
+  flow_type: "おまかせ"
+  mascot_instruction: "おまかせ"
+  decoration_motifs:
+    - "本"
+    - "ワイングラス"
+mascot_action_rules:
+  placement:
+    - "画面の空きスペース（左下、右下、隅）に配置"
+    - "フローの開始地点または終了地点"
+    - "重要なポイントを指し示す位置"
+  behaviors:
+    - "メインのトピックに関連する道具を持っている"
+    - "作業を手伝っているポーズ"
+    - "読者に向かって案内しているポーズ"
+    - "成果物の横でリラックスしている"
+  do_not:
+    - "情報の上に重ねて配置しない"
+    - "主役より目立たせすぎない"

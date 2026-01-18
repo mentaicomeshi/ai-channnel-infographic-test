@@ -1,0 +1,26 @@
+# General
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependencies
+node_modules/
+
+# Generated Artifacts
+outputs/
+prompts/
+*.pdf.images/
+
+# Editor/Tool Configuration
+.vscode/
+.idea/
+*.swp
+*.swo
+
