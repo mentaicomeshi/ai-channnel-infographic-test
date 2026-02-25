@@ -1,0 +1,21 @@
+{
+  "name": "ai-channel-infographic-skills",
+  "owner": {
+    "name": "Project Owner"
+  },
+  "metadata": {
+    "description": "Custom AI Channel Infographic Skills",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "text-to-slide",
+      "description": "Convert text to Marp slides and generate image prompts",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./.claude/skills/text-to-slide"
+      ]
+    }
+  ]
+}
